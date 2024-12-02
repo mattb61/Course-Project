@@ -1,15 +1,16 @@
 "use strict";
 
-const $ = (selector) => document.querySelector(selector);
+const $ = selector => document.querySelector(selector);
 
-const mainPage = () => {
-    window.location.origin;
+const scoreKeeper = () => {
+    let score = 0;
 }
 
 const pageSwap = () => {
-    window.location.assign("FirstQuestion.html");
+    self.location = ("FirstQuestion.html");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    $("#start_button").addEventListener("click", pageSwap)
+    $("#start").addEventListener("click", pageSwap);
+    scoreKeeper();
 });
