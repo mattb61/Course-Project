@@ -1,4 +1,4 @@
-#start {
+#start, #answer2, #answer3, #answer4 {
     color: white;
     font-size: 200%;
     border-style: solid;
@@ -16,9 +16,18 @@
     margin-top: auto;
 }
 
-#question1 {
+#questionTitle {
     color: white;
     font-size: 150%;
     bottom: 500px;
     text-shadow: black;
+}
+
+#next {
+    color: white;
+    font-size: 150%;
+    border-style: solid;
+    background-color: #ff6600;
+    border-radius: 10px;
+    margin-top: auto;
 }

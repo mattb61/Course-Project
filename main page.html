@@ -16,12 +16,17 @@
                                 background-position: center;
                                 height: 100vh;">
                                 <div><img class="mx-auto d-block" src="JS Project materials\Elden Ring title.png"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a role="button" id="start" href="FirstQuestion.html">Start Quiz</button></a>
+        <div class="container" id="main_section">
+            <div class="row1">
+                <div class="col-12 text-center d-grid gap-4" id="firstRow">
+                    <p id="questionTitle" class="invisible"></p>
+                    <button type="button" id="start" class="btn btn-primary">Start Quiz</button>
+                    <button type="button" id="answer2" class="invisible"></button>
+                    <button type="button" id="answer3" class="invisible"></button>
+                    <button type="button" id="answer4" class="invisible"></button>
                 </div>
             </div>
         </div>
     </body>
+    <script src="CourseProject.js"></script>
 </html>
