@@ -18,7 +18,8 @@
 
 #questionTitle {
     color: white;
-    font-size: 150%;
+    text-shadow: 10px 10px black;
+    font-size: 200%;
     bottom: 500px;
     text-shadow: black;
 }
