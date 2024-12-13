@@ -10,11 +10,13 @@ let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
 let qTitle = document.getElementById("questionTitle");
 
+let score = 0;
+
 const checkAnswer = () => {
     if (qTitle.textContent == "Who was the first Elden Lord?") {
         answer2.addEventListener("click", () => {
             secondQuestion();
-            sessionStorage.setItem("score", "1")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             secondQuestion();
         }),
@@ -30,7 +32,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Who was responsible for the Night of the Black Knives?") {
         answer3.addEventListener("click", () => {
             thirdQuestion();
-            sessionStorage.setItem("score", "2")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             thirdQuestion();
         }),
@@ -46,7 +48,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Who resurrected and recalled the Tarnished to become Elden Lord?") {
         answer3.addEventListener("click", () => {
             fourthQuestion();
-            sessionStorage.setItem("score", "3")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             fourthQuestion();
         }),
@@ -62,7 +64,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "What is the other name for the Rune of Death?") {
         answer4.addEventListener("click", () => {
             fifthQuestion();
-            sessionStorage.setItem("score", "4")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             fifthQuestion();
         }),
@@ -78,11 +80,11 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Who is the strongest demigod in terms of abilities?") {
         answer2.addEventListener("click", () => {
             sixthQuestion();
-            sessionStorage.setItem("score", "5")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             sixthQuestion();
         }),
-        answer2.addEventListener("click", () => {
+        answer3.addEventListener("click", () => {
             sixthQuestion();
         }),
         answer4.addEventListener("click", () => {
@@ -94,7 +96,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Who is the final boss of Elden Ring?") {
         answer3.addEventListener("click", () => {
             seventhQuestion();
-            sessionStorage.setItem("score", "6")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             seventhQuestion();
         }),
@@ -110,7 +112,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Which dragon's spear is located in Leyndell? (Literal and/or item pickup)") {
         answer4.addEventListener("click", () => {
             eighthQuestion();
-            sessionStorage.setItem("score", "7")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             eighthQuestion();
         }),
@@ -126,7 +128,7 @@ const checkAnswer = () => {
     if (qTitle.textContent == "Who is the first major boss you're TECHNICALLY supposed to fight?") {
         answer2.addEventListener("click", () => {
             ninthQuestion();
-            sessionStorage.setItem("score", "8")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
             ninthQuestion();
         }),
@@ -142,33 +144,36 @@ const checkAnswer = () => {
     if (qTitle.textContent == "What is the name of the tree Miquella planted to replace the Erdtree?") {
         answer4.addEventListener("click", () => {
             tenthQuestion();
-            sessionStorage.setItem("score", "9")},
+            score = score + 1},
         answer1.addEventListener("click", () => {
-            ninthQuestion();
+            tenthQuestion();
         }),
         answer2.addEventListener("click", () => {
-            ninthQuestion();
+            tenthQuestion();
         }),
         answer3.addEventListener("click", () => {
-            ninthQuestion();
+            tenthQuestion();
         })
         );
     }
 
     if (qTitle.textContent == "Who is St. Trina?") {
         answer3.addEventListener("click", () => {
-            sessionStorage.setItem("score", "10"),
-            (window.location.href = "ScorePresentation.html");
+            score = score + 1;
+            sessionStorage.setItem("score", score);
+            window.location.href = "ScorePresentation.html"});
         answer1.addEventListener("click", () => {
+            sessionStorage.setItem("score", score);
             (window.location.href = "ScorePresentation.html");
         }),
         answer2.addEventListener("click", () => {
+            sessionStorage.setItem("score", score);
             (window.location.href = "ScorePresentation.html");
         }),
         answer4.addEventListener("click", () => {
+            sessionStorage.setItem("score", score);
             (window.location.href = "ScorePresentation.html");
         });
-        })
     }
 }
 
@@ -255,7 +260,7 @@ const tenthQuestion = () => {
     qTitle.textContent = "Who is St. Trina?";
     answer1.textContent = "Some random priest";
     answer2.textContent = "Some random saint";
-    answer3.textContent = "CLICK THIS BUTTON TO SKIP TO RESULTS PAGE";
+    answer3.textContent = "Miquella's alter ego";
     answer4.textContent = "Miquella's old friend";
 };
 
