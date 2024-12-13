@@ -1,8 +1,8 @@
-#start, #answer2, #answer3, #answer4 {
+#start, #answer1, #answer2, #answer3, #answer4 {
     color: white;
     font-size: 200%;
     border-style: solid;
-    background-color: #ff6600;
+    background-color: darkorange;
     border-radius: 10px;
     margin-top: auto;
 }
@@ -11,7 +11,7 @@
     color: white;
     font-size: 150%;
     border-style: solid;
-    background-color: #ff6600;
+    background-color: darkorange;
     border-radius: 10px;
     margin-top: auto;
 }
@@ -28,7 +28,11 @@
     color: white;
     font-size: 150%;
     border-style: solid;
-    background-color: #ff6600;
+    background-color: darkorange;
     border-radius: 10px;
     margin-top: auto;
+}
+
+#main_page {
+    background-image: "Course Project\JS Project materials\ERLogo4K.png";
 }
